@@ -1,0 +1,39 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #2a1c24; font-family: system-ui, sans-serif; }
+#app canvas { display: block; touch-action: none; }
+#vr {
+  position: fixed; right: 18px; bottom: 18px;
+  padding: 12px 24px; font-size: 17px; font-weight: 700;
+  color: #2a1a0a; background: #ffd59a; border: 0; border-radius: 12px; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+#vr:disabled { background: #1c4048; color: #cfe6e2; cursor: default; }
+#nocab {
+  display: none; position: fixed; left: 50%; bottom: 64px; transform: translateX(-50%);
+  padding: 10px 22px; font-size: 16px; font-weight: 700; color: #fff4e6; background: #8a3a22;
+  border: 2px solid #ffd59a; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+#hud {
+  display: none; position: fixed; left: 16px; top: 14px; max-width: min(560px, calc(100vw - 32px));
+  color: #f4fbf8; font: 15px/1.5 system-ui, sans-serif; pointer-events: none;
+  background: rgba(8,32,38,0.82); padding: 8px 14px; border-radius: 10px; border: 1px solid #23727e;
+}
+#hud .top b { color: #ffd59a; }
+#hud .tide { color: #9fe6ff; font-size: 14px; margin-bottom: 2px; }
+#hud i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+#hud em { color: #9cc3c0; font-style: normal; font-size: 13px; }
+#toast {
+  display: none; position: fixed; left: 50%; top: 16px; transform: translateX(-50%); max-width: calc(100vw - 32px);
+  color: #2a1a0a; background: #ffd59a; font: bold 17px system-ui, sans-serif; padding: 8px 18px; border-radius: 10px;
+  pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+#hint {
+  position: fixed; left: 16px; bottom: 18px; right: 300px; color: #f4fbf8; font: 14px/1.5 system-ui, sans-serif;
+  pointer-events: none;
+}
+#hint span { display: inline-block; background: rgba(8,32,38,0.8); padding: 6px 10px; border-radius: 8px; }
+#hint:empty { display: none; }
+#fps {
+  display: none; position: fixed; right: 16px; bottom: 76px; color: #ffdf6e; font: bold 15px monospace;
+  background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 6px; pointer-events: none;
+}
+@media (max-width: 760px) { #hint { right: 16px; bottom: 120px; } #toast { top: auto; bottom: 170px; } #hud { font-size: 13px; } }
